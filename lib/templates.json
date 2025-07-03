@@ -13,6 +13,20 @@
     "instructions": "A Next.js 13+ app that reloads automatically. Using the pages router.",
     "port": 3000
   },
+  "nextjs-3": {
+    "name": "Next.js 3",
+    "lib": ["nextjs@14.2.5", "typescript", "@types/node", "@types/react", "@types/react-dom", "postcss", "tailwindcss", "shadcn"],
+    "file": "pages/index.tsx",
+    "instructions": "A Next.js 13+ app that reloads automatically. Using the pages router.",
+    "port": 3000
+  },
+  "nextjs-4": {
+    "name": "Next.js 4",
+    "lib": ["nextjs@14.2.5", "typescript", "@types/node", "@types/react", "@types/react-dom", "postcss", "tailwindcss", "shadcn"],
+    "file": "app/page.tsx",
+    "instructions": "A Next.js 14+ app that reloads automatically. Using the app router.",
+    "port": 3000
+  },
   "vue-developer": {
     "name": "Vue.js developer",
     "lib": ["vue@latest", "nuxt@3.13.0", "tailwindcss"],
