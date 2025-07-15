@@ -199,7 +199,7 @@ export function ChatInput({
               type="file"
               id="multimodal"
               name="multimodal"
-              accept="image/*"
+              accept="image/*,.csv"
               multiple={true}
               className="hidden"
               onChange={handleFileInput}

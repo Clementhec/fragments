@@ -159,13 +159,23 @@ export default function Home() {
       stop()
     }
 
+    // Construction du content du message utilisateur
     const content: Message['content'] = [{ type: 'text', text: chatInput }]
-    const images = await toMessageImage(files)
-
+    // Ne passe à toMessageImage que les fichiers images
+    const imageFiles = files.filter((file) => file.type.startsWith('image/'))
+    const images = await toMessageImage(imageFiles)
+   
     if (images.length > 0) {
       images.forEach((image) => {
-        content.push({ type: 'image', image })
+        //content.push({ type: 'image', image })
       })
+    }
+
+    // Ajout du CSV comme texte dans le message (pas en multimodal ni en type 'csv')
+    const csvFiles = files.filter((file) => file.type === 'text/csv' || file.name.toLowerCase().endsWith('.csv'))
+    for (const csvFile of csvFiles) {
+      const text = await csvFile.text()
+      content.push({ type: 'text', text: `Data :\n${text}` })
     }
 
     const updatedMessages = addMessage({

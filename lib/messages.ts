@@ -17,6 +17,12 @@ export type MessageImage = {
   image: string
 }
 
+export type MessageCSV = {
+  type: 'csv'
+  csv: string
+  name: string
+}
+
 export type Message = {
   role: 'assistant' | 'user'
   content: Array<MessageText | MessageCode | MessageImage>

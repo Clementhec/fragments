@@ -24,7 +24,7 @@
     "name": "Next.js 4",
     "lib": ["nextjs@14.2.5", "typescript", "@types/node", "@types/react", "@types/react-dom", "postcss", "tailwindcss", "shadcn"],
     "file": "app/page.tsx",
-    "instructions": "A Next.js 14+ app that reloads automatically. Using the app router.",
+    "instructions": "A Next.js 14+ app that reloads automatically. Using the app router. You must use shadcn for rendering graphs and utilize the chart.tsx component to display them. Always enclose the use client directive in double quotes.",
     "port": 3000
   },
   "vue-developer": {
